@@ -5,7 +5,8 @@ Most of them have no practical functionalty.
 Right now, here are three tiny scripts:
 
 1. lcs.pl
-   This program deals with the longest common subsequence problem, implemeting the algorithm I learnt from the algorithm class in NTU.
+   This program deals with the longest common subsequence problem,
+   implemeting the algorithm I learnt from the algorithm class in NTU.
 
 2. stamp.pl
    Try to solve the stamp problem, which is similiar to knapback problem.
@@ -13,4 +14,6 @@ Right now, here are three tiny scripts:
 
 3. math.pl
    Currently, the script is functioned as a text calculator.
-   I figure out the method totally by myself. The first step is to transform the infix form to the postfix form, and then calc in the postfix form. Right now it doesn't support the parentheses.
+   I figure out the method totally by myself. The first step is to
+   transform the infix form to the postfix form, and then calc in the
+   postfix form. Right now it doesn't support the parentheses.
