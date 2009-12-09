@@ -37,12 +37,14 @@ sub calc {
 	    my $b = pop @stack;
 
 	    push @stack, $op{$op}->($b, $a);
+	    
+	    say "Doing: ", $op;
 	}
 	else {
 	    push @stack, $op;
 	}
 
-	say @stack->join(" ");
+	say "Stack: ", @stack->join(" ");
     }
 
     return $stack[0];
