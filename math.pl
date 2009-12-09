@@ -9,10 +9,10 @@ use POSIX;
 1. 支援括號
 =cut
 
-test();
+test(shift);
 
 sub test {
-    my $expr = "1+2-3*4/2";
+    my $expr = shift || "1+2-3*4/2";
     say $expr, " = ", calc($expr);
 }
 
@@ -20,7 +20,7 @@ sub test {
 sub calc {
     my $expr = shift;
     my @operands = infix_to_postfix($expr);
-    say @operands;
+    say @operands->join(" ");
 
     my @stack;
 
