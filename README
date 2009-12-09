@@ -1,0 +1,16 @@
+This git repository stores some tiny programs in Perl.
+
+Most of them have no practical functionalty.
+
+Right now, here are three tiny scripts:
+
+1. lcs.pl
+   This program deals with the longest common subsequence problem, implemeting the algorithm I learnt from the algorithm class in NTU.
+
+2. stamp.pl
+   Try to solve the stamp problem, which is similiar to knapback problem.
+   Again the algorithm is what I learnt from the algorithm class in NTU.
+
+3. math.pl
+   Currently, the script is functioned as a text calculator.
+   
