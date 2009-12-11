@@ -1,6 +1,5 @@
 #!/usr/bin/perl
-use strict;
-use 5.010;
+use Modern::Perl;
 
 use autobox::Core;
 use POSIX;
@@ -15,7 +14,6 @@ sub test {
     my $expr = shift || "1+2-3*4/2";
     say $expr, " = ", calc($expr);
 }
-
 
 sub calc {
     my $expr = shift;
@@ -61,7 +59,7 @@ sub infix_to_postfix {
 
     while (@tokens > 0) {
 	my $token = shift @tokens;
-	if (isdigit $token or $token eq '.') {
+	if (is_part_num($token)) {
 	    $current_num .= $token;
 	}
 	else {
@@ -89,4 +87,8 @@ sub infix_to_postfix {
     }
 
     return wantarray ? @operands : [@operands]->join(" ");
+}
+
+sub is_part_num {
+    isdigit($_[0]) or $_[0] eq '';
 }
